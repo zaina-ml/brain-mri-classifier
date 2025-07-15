@@ -94,5 +94,6 @@ brain-mri-classifier/
 
 ### Clone the repository
 ```bash
-git clone https://github.com/yourusername/vit-cnn-brain-mri.git
-cd vit-cnn-brain-mri
+git clone https://github.com/zaina-ml/brain-mri-classifier
+cd brain-mri-classifier
+git lfs pull
