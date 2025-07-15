@@ -11,7 +11,16 @@ This study evaluates the performance of convolutional neural networks (CNNs) and
 available multiclass brain tumor dataset. To support experimentation and reproducibility, a custom GUI-based deep learning software was developed, enabling users to train models, configure parameters, apply data augmentation, monitor performance metrics, and generate diagnostic reports. A comparative analysis was conducted using accuracy, precision, recall, F1-score, AUROC, and confusion matrices. Results showed that ViT-B/16, EfficientNetB0, and ViT-B/32
 achieved test accuracies of over 98 %. ViT-B/16 performed the best overall, demonstrating that larger model capacity and reduced patch size enhance feature extraction in brain MRI classification. EfficientNetB0 delivered strong performance despite its reduced complexity, demonstrating the strength of CNNs and the potential of transformer-based architectures for detecting brain tumors.
 
+
 ---
+
+## Large Files / Git LFS
+This repository uses Git Large File Storage (LFS) to manage large files such as trained model weights. 
+
+**IMPORTANT: ** Before cloning, make sure Git LFS is installed, otherwise large files will not download properly. 
+
+---
+
 
 ## Dataset
 
@@ -34,6 +43,10 @@ brain-mri-classifier
 │      └── convnext_wda.pth
 │  ├── EfficientNet
 │    ├── EfficientNetB0
+│      ├── NDA (No Data Augmentation)
+│        └── efnetb0_nda.pth
+│      └── WDA (With Data Augmentation)
+│        └── efnetb0_wda.pth
 │    ├── EfficientNetB5
 │    ├── EfficientNetB7
 │  ├── ViT
