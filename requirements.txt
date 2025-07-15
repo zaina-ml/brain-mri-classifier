@@ -1,0 +1,12 @@
+REQUIREMENTS BELOW ARE NEEDED TO RUN GUI
+
+torch>=2.6
+torchvision>=0.21.0
+torchmetrics>=1.7.1
+
+matplotlib>=3.10.1
+numpy>=2.2.4
+scikit-learn>=1.61
+
+
+
