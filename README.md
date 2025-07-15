@@ -17,7 +17,7 @@ achieved test accuracies of over 98 %. ViT-B/16 performed the best overall, demo
 ## Large Files / Git LFS
 This repository uses Git Large File Storage (LFS) to manage large files such as trained model weights. 
 
-**IMPORTANT: ** Before cloning, make sure Git LFS is installed, otherwise large files will not download properly. 
+**IMPORTANT:** Before cloning, make sure Git LFS is installed, otherwise large files will not download properly. 
 
 ---
 
@@ -34,42 +34,44 @@ More details in `dataset_info.txt`.
 ## Repository Layout
 
 ```
-brain-mri-classifier
-├── models/
-│  ├── ConvNeXt (Base)
-│    ├── NDA (No Data Augmentation)
-│      └── convnext_nda.pth
-│    └── WDA (With Data Augmentation)
-│      └── convnext_wda.pth
-│  ├── EfficientNet
-│    ├── EfficientNetB0
-│      ├── NDA (No Data Augmentation)
-│        └── efnetb0_nda.pth
-│      └── WDA (With Data Augmentation)
-│        └── efnetb0_wda.pth
-│    ├── EfficientNetB5
-│    ├── EfficientNetB7
-│  ├── ViT
-│    ├── ViT-B/16
-│    ├── ViT-B/32
-│  ├── SwinTransformer (Base)
+brain-mri-classifier/
+├── models/                
+│  ├── ConvNeXt_Base/
+│  │   ├── NDA/
+│  │   └── WDA/
+│  ├── EfficientNet/
+│  │   ├── EfficientNetB0/{NDA,WDA}
+│  │   ├── EfficientNetB5/
+│  │   └── EfficientNetB7/
+│  ├── SwinTransformer_Base/
+│  └── ViT/
+│      ├── ViT-B16/
+│      └── ViT-B32/
+
 ├── paper/
-│    ├── paper.tex
-│    ├── references.bib
-│    ├── paper.pdf
-├── reports /
-│  ├── ConvNeXt (Base)
-│    ├── NDA (No Data Augmentation)
-│      └── convnext_report_nda.pdf
-│    └── WDA (With Data Augmentation)
-│      └── convnext_report_wda.pdf
-│  ├── EfficientNet
-│    ├── EfficientNetB0
-│    ├── EfficientNetB5
-│    ├── EfficientNetB7
+│  ├── figures/
+│  │   ├── conf_mat_v2.png
+│  │   └── ...
+│  ├── paper.tex
+│  ├── references.bib
+│  └── paper.pdf
+
+├── reports/
+│  ├── model_reports/
+│  │   ├── ConvNeXt_Base/
+│  │   │   ├── NDA/
+│  │   │   └── WDA/
+│  │   └── ViT/...
+│  └── diagnostics/
+│      ├── diagnostics.png
+│      ├── selection.png
+│      └── traininglog.png
+
+├── gui.py                         
 ├── dataset_info.txt
-├── gui.py
 ├── requirements.txt
+├── .gitattributes
+└── README.md
 
 ```
 
