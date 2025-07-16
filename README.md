@@ -20,7 +20,14 @@ This repository uses Git Large File Storage (LFS) to manage large files such as 
 **IMPORTANT:** Before cloning, make sure Git LFS is installed, otherwise large files will not download properly. 
 
 ---
+## GUI / Training Interface
+The training interface is the ```gui.py``` file, it is a simple intuitive platform allowing for easy model training and evaluation. More can be learned about the interface by going to ```paper/paper.pdf```
 
+<p align="center">
+  <img src="screenshots/selection.png" alt="Model Selection / Hyperparameter Configuration" width="300"/>
+  <img src="screenshots/traininglog.png" alt="Training Log" width="300"/>
+  <img src="screenshots/diagnostics.png" alt="Model Diagnostics" width="300"/>
+</p>
 
 ## Dataset
 
@@ -28,13 +35,24 @@ The [Kaggle Brain Tumor MRI Dataset](https://www.kaggle.com/datasets/masoudnickp
 
 More details in `dataset_info.txt`.
 
-> **Note:** The dataset is not included in this repo. The dataset can either be downloaded through the link above and placed in a folder named ```data``` or the training interface (```gui.py```) can automatically download the dataset in the local filespace. 
+> **Note:** The dataset is not included in this repo. The dataset can either be downloaded through the link above and then unzipped and placed in a folder named ```data```. Additionally, training interface (```gui.py```) can automatically download the dataset in the local filespace. 
 
 ---
 ## Repository Layout
 
 ```
 brain-mri-classifier/
+├── model_reports/
+│  ├── model_reports/
+│  │   ├── ConvNeXt_Base/
+│  │   │   ├── NDA/
+│  │   │   └── WDA/
+│  │   └── ViT/...
+│  └── diagnostics/
+│      ├── diagnostics.png
+│      ├── selection.png
+│      └── traininglog.png
+
 ├── models/                
 │  ├── ConvNeXt_Base/
 │  │   ├── NDA/
@@ -56,16 +74,10 @@ brain-mri-classifier/
 │  ├── references.bib
 │  └── paper.pdf
 
-├── reports/
-│  ├── model_reports/
-│  │   ├── ConvNeXt_Base/
-│  │   │   ├── NDA/
-│  │   │   └── WDA/
-│  │   └── ViT/...
-│  └── diagnostics/
-│      ├── diagnostics.png
-│      ├── selection.png
-│      └── traininglog.png
+├── screenshots/
+│  ├── diagnsotics.png
+│  ├── selection.png
+│  └── traininglog.png
 
 ├── gui.py                         
 ├── dataset_info.txt
@@ -82,5 +94,6 @@ brain-mri-classifier/
 
 ### Clone the repository
 ```bash
-git clone https://github.com/yourusername/vit-cnn-brain-mri.git
-cd vit-cnn-brain-mri
+git clone https://github.com/zaina-ml/brain-mri-classifier
+cd brain-mri-classifier
+git lfs pull
